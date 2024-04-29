@@ -347,6 +347,8 @@ type OperationContext interface {
 	Content() string
 	// ClientInfo returns information about the client that initiated this operation
 	ClientInfo() ClientInfo
+	// Variables is the variables of the operation
+	Variables() []byte
 }
 
 var _ OperationContext = (*operationContext)(nil)

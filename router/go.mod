@@ -1,6 +1,8 @@
-module github.com/wundergraph/cosmo/router
+module github.com/tibibok/cosmo/router
 
 go 1.21.0
+
+replace github.com/wundergraph/cosmo/router => github.com/tibibok/cosmo/router v0.1.1
 
 require (
 	connectrpc.com/connect v1.11.1

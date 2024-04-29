@@ -1694,6 +1694,9 @@ func newHTTPTransport(opts *SubgraphTransportOptions) *http.Transport {
 		DialContext: func(ctx context.Context, network, addr string) (net.Conn, error) {
 			return dialer.DialContext(ctx, network, addr)
 		},
+		TLSClientConfig: &tls.Config{
+			InsecureSkipVerify: true,
+		},
 		// The defaults value 0 = unbounded.
 		// We set to some value to prevent resource exhaustion e.g max requests and ports.
 		MaxConnsPerHost: 100,
